@@ -1,6 +1,9 @@
 # Getting started with Sonic Pi
 
-Sonic Pi is an open source programming environment, designed for creating new sounds with code in a live coding environment; it was developed by Dr Sam Aaron. This resource will help get you started with the basics of Sonic Pi.
+Sonic Pi is an open source programming environment, designed for
+creating new sounds with code in a live coding environment; it was
+developed by Dr Sam Aaron. This resource will help get you started with
+the basics of Sonic Pi.
 
 ## Requirements
 
@@ -25,7 +28,10 @@ You will need the following worksheet to get started:
 
 ## Learn more
 
-This worksheet is just a starting point. To learn more read [Sam Aaron's MagPi article about Sonic Pi v2.0 here](http://issuu.com/themagpi/docs/issue23final/1) Pages 44-47.
+This worksheet is just a starting point. To learn more read
+[Sam Aaron's MagPi article about Sonic Pi v2.0 here](http://issuu.com/themagpi/docs/issue23final/1)
+Pages 44-47. Also, work through the full tutorial built into Sonic Pi
+itself. Simply click **Help** and look at the **Tutorial** tab.
 
 ## Licence
 

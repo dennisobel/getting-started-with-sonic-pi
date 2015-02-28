@@ -1,14 +1,23 @@
 # Getting started with Sonic Pi
 
-Ever wanted to make funky music like Daft Punk or will.i.am but you're not sure how to hold a cello, let alone play it? Sonic Pi could get you there.
+Ever wanted to make funky music like Daft Punk or will.i.am but you're
+not sure how to hold a cello or guitar, let alone play it? Sonic Pi
+could get you there. Instead of plucking strings - we'll be writint code.
 
 ## First sounds with Sonic Pi
 
 ![](images/interface1.png)
 
-This is the Sonic Pi interface; it has three main windows. The largest one is for writing your code, and we call it the Programming Panel. There is also an output panel that displays information about your program as it runs. When you click on the **help** button at the top of the window, the third panel appears along the bottom displaying help documentation. This contains information about different code you can try and use, as well as different synth sounds, samples, and much more.
+This is the Sonic Pi interface; it has three main windows. The largest
+one is for writing your code, and we call it the Programming
+Panel. There is also an output panel that displays information about
+your program as it runs. When you click on the **Help** button at the
+top of the window, the third panel appears along the bottom displaying
+help documentation. This contains information about different code you
+can try and use, as well as different synth sounds, samples, and much
+more.
 
-1. Launch Sonic Pi from the desktop or applications menu.
+1. Launch Sonic Pi from the programming menu.
 
 1. Select **Workspace 1** and type:
 
@@ -141,11 +150,13 @@ This is quite a long process if you know the notes of the song you are trying to
 
 ## Change the sounds
 
-It's time to make your tune sound more interesting! We can do this by changing the synthesizer sounds it is using. The default Sonic Pi synth is called `beep`.
+It's time to make your tune sound more interesting! We can do this by
+changing the synthesizer sounds it is using. The default Sonic Pi synth
+is called `:beep`.
 
-To use a different synth, you need to add the code `use_synth :name of synth` above the sequence of code you want to use it in.
+To use a different synth, you need to add the code `use_synth :name_of_synth` above the sequence of code you want to use it in.
 
-In this example, `fm` is the name of the synth:
+In this example, `:fm` is the name of the synth:
 
 ```ruby
 use_synth :fm
@@ -159,15 +170,23 @@ end
 
 ### Synths to try
 
-There are lots of cool-sounding synths included with Sonic Pi. To find the names of them, click on the **help** icon at the top of the screen so that the help documents window appears. Then select **Synths** from the tabs along the left hand side of the help window. Click on any of the synth names to get more information on how to use it.
+There are lots of cool-sounding synths included with Sonic Pi. To find
+the names of them, click on the **Help** button at the top of the screen
+so that the help documents window appears. Then select **Synths** from
+the tabs along the left hand side of the help window. Click on any of
+the synth names to get more information on how to use it.
 
 ## Use samples
 
-Not only can you create music in Sonic Pi using single notes, you can also create music with samples. Samples are pre-recorded sounds or tunes that you can bring into your music. This is a really simple way to make your music sound amazing!
+Not only can you create music in Sonic Pi using single notes, you can
+also create music with samples. Samples are pre-recorded sounds or tunes
+that you can bring into your music. This is a really simple way to make
+your music sound amazing!
 
-To use a sample, you need to add the code `sample :name of sample` in the sequence of your music program where you want it to play.
+To use a sample, you need to add the code `sample :name_of_sample` in
+the sequence of your music program where you want it to play.
 
-In this example, `loop_amen` is the name of the sample:
+In this example, `:loop_amen` is the name of the sample:
 
 ```ruby
 2.times do
@@ -178,11 +197,16 @@ end
 
 ### Samples to try
 
-There are lots of samples included with Sonic Pi. To find the names of them, click on **help** followed by **samples** on the left hand side of the help window. Click on any of the sample names to get more information on how to use it. 
+There are lots of samples included with Sonic Pi. To find the names of
+them, click on **Help** followed by **Samples** on the left hand side of
+the help window. Click on any of the sample names to get more
+information on how to use it.
 
 ## Playing two tunes at the same time
 
-Music often has a repeating backing track, with a separate melody played over the top. So far in Sonic Pi you have played one tune. Let's try playing two tunes at the same time!
+Music often has a repeating backing track, with a separate melody played
+over the top. So far in Sonic Pi you have played one tune. Let's try
+playing two tunes at the same time!
 
 
 1. Click on a new workspace tab.
@@ -218,28 +242,27 @@ Music often has a repeating backing track, with a separate melody played over th
 
 ## Live code!
 
-Sonic Pi has been developed to be a platform for the live coding of music, so that the code can be manipulated, changed and adapted in real time; this means coders can perform their code rather than playing pre-written programs. Why not have a go?
+Sonic Pi has been developed to be a platform for the live coding of
+music, so that the code can be manipulated, changed and adapted in real
+time; this means coders can perform their code rather than playing
+pre-written programs. Why not have a go?
 
 1. In a new workspace tab type:
 
-	```ruby
-	define :play_my_synth do
-	  use_synth :prophet
-  	  play 50, attack: 0.2, release: 1.3
-      sleep 0.5
-    end
-    
-    loop do
-      play_my_synth
-    ```
+```ruby
+live_loop :my_jam do
+  use_synth :prophet
+  play 50, attack: 0.2, release: 1.3, cutoff: 70
+  sleep 0.5
+end
+```
+
 1. Press **play** to start the program.
-1. Whilst the tune is playing, comment out the last three lines by adding a `#` symbol to the start of each line like this:
+1. Whilst the tune is playing, change one of the values. For example, change the cutoff to `90`.
+1. Now press **play** again. Can you hear what changed?
+1. Continue experimenting and changing things around. Try to just change one thing at a time so you can hear the difference.
+1. Now you are really rocking, or should we say live coding!! 
 
-	```ruby
-	# loop do
-	#   play_my_synth
-	# end
-	```
-1. Next change some of code in the function, and press **play** again. Now you are really rocking! 
-
-Sonic Pi offers so much more functionality to both coders and musicians alike than has been mentioned here. If you want to try some more features then move onto [the next tutorial here](worksheet-2.md)
+Sonic Pi offers so much more functionality to both coders and musicians
+alike than has been mentioned here. If you want to try some more
+features then move onto [the next tutorial here](worksheet-2.md)
